@@ -1,0 +1,4 @@
+1895 dates, 84 features, positives=0.137
+MLP                    test AUC 0.550±0.042  AP 0.169  train AUC 0.907  inner 0.591  (177s)
+MultiTask-NN           test AUC 0.559±0.049  AP 0.175  train AUC 0.765  inner 0.607  (157s)
+LightGBM-Directional   test AUC 0.581±0.030  AP 0.191  train AUC 0.824  inner 0.598  (32s)

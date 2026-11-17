@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+data_raw/
+Examples/
+trial/
+CDA_ETSINF-Project-guidelines*.pdf

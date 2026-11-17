@@ -1,0 +1,388 @@
+                  model  roc_auc  auc_lo  auc_hi  avg_precision  lift_top10  brier  train_auc  p_better_than_attract
+0                 Prior    0.500   0.500   0.500          0.137       1.000  0.119      0.500                  0.008
+1        LogReg-Attract    0.557   0.510   0.614          0.187       1.487  0.118      0.572                  0.000
+2                LogReg    0.535   0.497   0.575          0.162       1.200  0.135      0.757                  0.159
+3                   kNN    0.540   0.501   0.573          0.173       1.459  0.121      0.841                  0.213
+4          DecisionTree    0.525   0.490   0.566          0.151       1.009  0.197      0.772                  0.101
+5          RandomForest    0.566   0.524   0.611          0.190       1.566  0.167      0.923                  0.596
+6              LightGBM    0.576   0.536   0.613          0.185       1.421  0.119      0.869                  0.686
+7                   MLP    0.550   0.512   0.600          0.169       1.316  0.180      0.907                  0.366
+8          MultiTask-NN    0.559   0.518   0.603          0.175       1.253  0.120      0.765                  0.469
+9  LightGBM-Directional    0.581   0.538   0.625          0.191       1.561  0.119      0.824                  0.762
+{
+ "eda": {
+  "like_rate_by_partner_attr_men": [
+   0.237,
+   0.448,
+   0.564,
+   0.678,
+   0.735
+  ],
+  "like_rate_by_partner_attr_women": [
+   0.195,
+   0.237,
+   0.313,
+   0.348,
+   0.425
+  ],
+  "selectivity_by_own_attr_men": [
+   0.594,
+   0.61,
+   0.496,
+   0.474,
+   0.466
+  ],
+  "selectivity_by_own_attr_women": [
+   0.364,
+   0.365,
+   0.322,
+   0.282,
+   0.169
+  ],
+  "n_dates": 1895,
+  "n_events": 30,
+  "n_men": 203,
+  "n_women": 207,
+  "rates": {
+   "y_mutual": 0.1367,
+   "y_m_likes": 0.5261,
+   "y_w_likes": 0.3024
+  },
+  "event_mutual_rate_range": [
+   0.022,
+   0.146,
+   0.238
+  ],
+  "missing_questionnaire_share_dates": {
+   "men": 0.21716101694915255,
+   "women": 0.3050131926121372
+  },
+  "univariate_auc_top": {
+   "y_mutual": {
+    "m_sex_partners": 0.569,
+    "attract_sum": 0.567,
+    "w_iq": 0.557,
+    "m_extraversion": 0.557,
+    "m_attract": 0.556,
+    "w_attract_std": 0.555,
+    "m_openness": 0.553,
+    "absdiff_hard_work": 0.55
+   },
+   "y_m_likes": {
+    "w_attract": 0.7,
+    "attract_diff": 0.684,
+    "w_health": 0.619,
+    "attract_sum": 0.602,
+    "absdiff_attract": 0.585,
+    "absdiff_health": 0.571,
+    "w_alcohol": 0.566,
+    "w_questionnaire_missing": 0.564
+   },
+   "y_w_likes": {
+    "attract_diff": 0.649,
+    "m_attract": 0.614,
+    "w_attract": 0.591,
+    "absdiff_attract": 0.584,
+    "w_iq": 0.566,
+    "w_health": 0.558,
+    "m_extraversion": 0.554,
+    "m_attract_std": 0.552
+   }
+  },
+  "mutual_grid": {
+   "low": {
+    "low": 0.071,
+    "mid": 0.092,
+    "high": 0.108
+   },
+   "mid": {
+    "low": 0.206,
+    "mid": 0.17,
+    "high": 0.187
+   },
+   "high": {
+    "low": 0.095,
+    "mid": 0.108,
+    "high": 0.194
+   }
+  }
+ },
+ "directional_auc": {
+  "MultiTask-NN": {
+   "auc_man_likes": 0.6786037399503633,
+   "auc_woman_likes": 0.6205911240307007
+  },
+  "LightGBM-Directional": {
+   "auc_man_likes": 0.6896122666440301,
+   "auc_woman_likes": 0.6370431389322329
+  }
+ },
+ "dynamics": {
+  "learning_curves": [
+   {
+    "model": "LightGBM",
+    "frac": 0.2,
+    "n": 322.6,
+    "tr": 0.934,
+    "te": 0.538,
+    "se": 0.036
+   },
+   {
+    "model": "LightGBM",
+    "frac": 0.4,
+    "n": 644.6,
+    "tr": 0.952,
+    "te": 0.575,
+    "se": 0.018
+   },
+   {
+    "model": "LightGBM",
+    "frac": 0.6,
+    "n": 874.2,
+    "tr": 0.928,
+    "te": 0.574,
+    "se": 0.018
+   },
+   {
+    "model": "LightGBM",
+    "frac": 0.8,
+    "n": 1165.8,
+    "tr": 0.909,
+    "te": 0.601,
+    "se": 0.022
+   },
+   {
+    "model": "LightGBM",
+    "frac": 1.0,
+    "n": 1516.0,
+    "tr": 0.89,
+    "te": 0.576,
+    "se": 0.016
+   },
+   {
+    "model": "LogReg",
+    "frac": 0.2,
+    "n": 324.2,
+    "tr": 0.943,
+    "te": 0.511,
+    "se": 0.035
+   },
+   {
+    "model": "LogReg",
+    "frac": 0.4,
+    "n": 605.8,
+    "tr": 0.877,
+    "te": 0.506,
+    "se": 0.029
+   },
+   {
+    "model": "LogReg",
+    "frac": 0.6,
+    "n": 878.8,
+    "tr": 0.849,
+    "te": 0.564,
+    "se": 0.01
+   },
+   {
+    "model": "LogReg",
+    "frac": 0.8,
+    "n": 1183.4,
+    "tr": 0.815,
+    "te": 0.565,
+    "se": 0.017
+   },
+   {
+    "model": "LogReg",
+    "frac": 1.0,
+    "n": 1516.0,
+    "tr": 0.792,
+    "te": 0.569,
+    "se": 0.011
+   },
+   {
+    "model": "MLP",
+    "frac": 0.2,
+    "n": 317.0,
+    "tr": 0.968,
+    "te": 0.564,
+    "se": 0.023
+   },
+   {
+    "model": "MLP",
+    "frac": 0.4,
+    "n": 631.0,
+    "tr": 0.987,
+    "te": 0.54,
+    "se": 0.029
+   },
+   {
+    "model": "MLP",
+    "frac": 0.6,
+    "n": 876.8,
+    "tr": 0.984,
+    "te": 0.542,
+    "se": 0.021
+   },
+   {
+    "model": "MLP",
+    "frac": 0.8,
+    "n": 1179.0,
+    "tr": 0.982,
+    "te": 0.549,
+    "se": 0.012
+   },
+   {
+    "model": "MLP",
+    "frac": 1.0,
+    "n": 1516.0,
+    "tr": 0.981,
+    "te": 0.585,
+    "se": 0.025
+   },
+   {
+    "model": "MultiTask-NN",
+    "frac": 0.2,
+    "n": 289.0,
+    "tr": 0.844,
+    "te": 0.522,
+    "se": 0.03
+   },
+   {
+    "model": "MultiTask-NN",
+    "frac": 0.4,
+    "n": 622.2,
+    "tr": 0.828,
+    "te": 0.565,
+    "se": 0.044
+   },
+   {
+    "model": "MultiTask-NN",
+    "frac": 0.6,
+    "n": 890.2,
+    "tr": 0.853,
+    "te": 0.551,
+    "se": 0.023
+   },
+   {
+    "model": "MultiTask-NN",
+    "frac": 0.8,
+    "n": 1174.8,
+    "tr": 0.821,
+    "te": 0.565,
+    "se": 0.021
+   },
+   {
+    "model": "MultiTask-NN",
+    "frac": 1.0,
+    "n": 1516.0,
+    "tr": 0.823,
+    "te": 0.59,
+    "se": 0.021
+   },
+   {
+    "model": "RandomForest",
+    "frac": 0.2,
+    "n": 361.8,
+    "tr": 0.997,
+    "te": 0.543,
+    "se": 0.031
+   },
+   {
+    "model": "RandomForest",
+    "frac": 0.4,
+    "n": 625.8,
+    "tr": 0.994,
+    "te": 0.562,
+    "se": 0.021
+   },
+   {
+    "model": "RandomForest",
+    "frac": 0.6,
+    "n": 874.2,
+    "tr": 0.994,
+    "te": 0.543,
+    "se": 0.023
+   },
+   {
+    "model": "RandomForest",
+    "frac": 0.8,
+    "n": 1212.2,
+    "tr": 0.99,
+    "te": 0.59,
+    "se": 0.028
+   },
+   {
+    "model": "RandomForest",
+    "frac": 1.0,
+    "n": 1516.0,
+    "tr": 0.983,
+    "te": 0.575,
+    "se": 0.022
+   }
+  ],
+  "nn_curve_MLP": {
+   "min_val_epoch": 73,
+   "min_val": 0.5767059571252515,
+   "final_val": 1.0364398913813802
+  },
+  "nn_curve_MultiTask-NN": {
+   "min_val_epoch": 1,
+   "min_val": 0.39697393908103307,
+   "final_val": 0.6867240096387917
+  },
+  "tree_depth_curve": [
+   {
+    "depth": 1,
+    "train": 0.533,
+    "test": 0.489
+   },
+   {
+    "depth": 2,
+    "train": 0.556,
+    "test": 0.494
+   },
+   {
+    "depth": 3,
+    "train": 0.613,
+    "test": 0.489
+   },
+   {
+    "depth": 4,
+    "train": 0.667,
+    "test": 0.5
+   },
+   {
+    "depth": 6,
+    "train": 0.753,
+    "test": 0.503
+   },
+   {
+    "depth": 8,
+    "train": 0.836,
+    "test": 0.496
+   },
+   {
+    "depth": 12,
+    "train": 0.953,
+    "test": 0.53
+   },
+   {
+    "depth": 16,
+    "train": 0.994,
+    "test": 0.524
+   },
+   {
+    "depth": 30,
+    "train": 1.0,
+    "test": 0.501
+   }
+  ],
+  "lgbm_rounds": {
+   "best_test_round": 6,
+   "best_test_auc": 0.5825119394049155,
+   "chosen": 785,
+   "auc_at_chosen": 0.5745512056729369,
+   "auc_at_1500": 0.5652951689519127
+  }
+ },
+ "impo

@@ -1,0 +1,498 @@
+{
+  "eda": {
+    "like_rate_by_partner_attr_men": [
+      0.237,
+      0.448,
+      0.564,
+      0.678,
+      0.735
+    ],
+    "like_rate_by_partner_attr_women": [
+      0.195,
+      0.237,
+      0.313,
+      0.348,
+      0.425
+    ],
+    "selectivity_by_own_attr_men": [
+      0.594,
+      0.61,
+      0.496,
+      0.474,
+      0.466
+    ],
+    "selectivity_by_own_attr_women": [
+      0.364,
+      0.365,
+      0.322,
+      0.282,
+      0.169
+    ],
+    "n_dates": 1895,
+    "n_events": 30,
+    "n_men": 203,
+    "n_women": 207,
+    "rates": {
+      "y_mutual": 0.1367,
+      "y_m_likes": 0.5261,
+      "y_w_likes": 0.3024
+    },
+    "event_mutual_rate_range": [
+      0.022,
+      0.146,
+      0.238
+    ],
+    "missing_questionnaire_share_dates": {
+      "men": 0.21716101694915255,
+      "women": 0.3050131926121372
+    },
+    "univariate_auc_top": {
+      "y_mutual": {
+        "m_sex_partners": 0.569,
+        "attract_sum": 0.567,
+        "w_iq": 0.557,
+        "m_extraversion": 0.557,
+        "m_attract": 0.556,
+        "w_attract_std": 0.555,
+        "m_openness": 0.553,
+        "absdiff_hard_work": 0.55
+      },
+      "y_m_likes": {
+        "w_attract": 0.7,
+        "attract_diff": 0.684,
+        "w_health": 0.619,
+        "attract_sum": 0.602,
+        "absdiff_attract": 0.585,
+        "absdiff_health": 0.571,
+        "w_alcohol": 0.566,
+        "w_questionnaire_missing": 0.564
+      },
+      "y_w_likes": {
+        "attract_diff": 0.649,
+        "m_attract": 0.614,
+        "w_attract": 0.591,
+        "absdiff_attract": 0.584,
+        "w_iq": 0.566,
+        "w_health": 0.558,
+        "m_extraversion": 0.554,
+        "m_attract_std": 0.552
+      }
+    },
+    "mutual_grid": {
+      "low": {
+        "low": 0.071,
+        "mid": 0.092,
+        "high": 0.108
+      },
+      "mid": {
+        "low": 0.206,
+        "mid": 0.17,
+        "high": 0.187
+      },
+      "high": {
+        "low": 0.095,
+        "mid": 0.108,
+        "high": 0.194
+      }
+    }
+  },
+  "directional_auc": {
+    "MultiTask-NN": {
+      "auc_man_likes": 0.6786037399503633,
+      "auc_woman_likes": 0.6205911240307007
+    },
+    "LightGBM-Directional": {
+      "auc_man_likes": 0.6896122666440301,
+      "auc_woman_likes": 0.6370431389322329
+    }
+  },
+  "dynamics": {
+    "learning_curves": [
+      {
+        "model": "LightGBM",
+        "frac": 0.2,
+        "n": 322.6,
+        "tr": 0.934,
+        "te": 0.538,
+        "se": 0.036
+      },
+      {
+        "model": "LightGBM",
+        "frac": 0.4,
+        "n": 644.6,
+        "tr": 0.952,
+        "te": 0.575,
+        "se": 0.018
+      },
+      {
+        "model": "LightGBM",
+        "frac": 0.6,
+        "n": 874.2,
+        "tr": 0.928,
+        "te": 0.574,
+        "se": 0.018
+      },
+      {
+        "model": "LightGBM",
+        "frac": 0.8,
+        "n": 1165.8,
+        "tr": 0.909,
+        "te": 0.601,
+        "se": 0.022
+      },
+      {
+        "model": "LightGBM",
+        "frac": 1.0,
+        "n": 1516.0,
+        "tr": 0.89,
+        "te": 0.576,
+        "se": 0.016
+      },
+      {
+        "model": "LogReg",
+        "frac": 0.2,
+        "n": 324.2,
+        "tr": 0.943,
+        "te": 0.511,
+        "se": 0.035
+      },
+      {
+        "model": "LogReg",
+        "frac": 0.4,
+        "n": 605.8,
+        "tr": 0.877,
+        "te": 0.506,
+        "se": 0.029
+      },
+      {
+        "model": "LogReg",
+        "frac": 0.6,
+        "n": 878.8,
+        "tr": 0.849,
+        "te": 0.564,
+        "se": 0.01
+      },
+      {
+        "model": "LogReg",
+        "frac": 0.8,
+        "n": 1183.4,
+        "tr": 0.815,
+        "te": 0.565,
+        "se": 0.017
+      },
+      {
+        "model": "LogReg",
+        "frac": 1.0,
+        "n": 1516.0,
+        "tr": 0.792,
+        "te": 0.569,
+        "se": 0.011
+      },
+      {
+        "model": "MLP",
+        "frac": 0.2,
+        "n": 317.0,
+        "tr": 0.968,
+        "te": 0.564,
+        "se": 0.023
+      },
+      {
+        "model": "MLP",
+        "frac": 0.4,
+        "n": 631.0,
+        "tr": 0.987,
+        "te": 0.54,
+        "se": 0.029
+      },
+      {
+        "model": "MLP",
+        "frac": 0.6,
+        "n": 876.8,
+        "tr": 0.984,
+        "te": 0.542,
+        "se": 0.021
+      },
+      {
+        "model": "MLP",
+        "frac": 0.8,
+        "n": 1179.0,
+        "tr": 0.982,
+        "te": 0.549,
+        "se": 0.012
+      },
+      {
+        "model": "MLP",
+        "frac": 1.0,
+        "n": 1516.0,
+        "tr": 0.981,
+        "te": 0.585,
+        "se": 0.025
+      },
+      {
+        "model": "MultiTask-NN",
+        "frac": 0.2,
+        "n": 289.0,
+        "tr": 0.844,
+        "te": 0.522,
+        "se": 0.03
+      },
+      {
+        "model": "MultiTask-NN",
+        "frac": 0.4,
+        "n": 622.2,
+        "tr": 0.828,
+        "te": 0.565,
+        "se": 0.044
+      },
+      {
+        "model": "MultiTask-NN",
+        "frac": 0.6,
+        "n": 890.2,
+        "tr": 0.853,
+        "te": 0.551,
+        "se": 0.023
+      },
+      {
+        "model": "MultiTask-NN",
+        "frac": 0.8,
+        "n": 1174.8,
+        "tr": 0.821,
+        "te": 0.565,
+        "se": 0.021
+      },
+      {
+        "model": "MultiTask-NN",
+        "frac": 1.0,
+        "n": 1516.0,
+        "tr": 0.823,
+        "te": 0.59,
+        "se": 0.021
+      },
+      {
+        "model": "RandomForest",
+        "frac": 0.2,
+        "n": 361.8,
+        "tr": 0.997,
+        "te": 0.543,
+        "se": 0.031
+      },
+      {
+        "model": "RandomForest",
+        "frac": 0.4,
+        "n": 625.8,
+        "tr": 0.994,
+        "te": 0.562,
+        "se": 0.021
+      },
+      {
+        "model": "RandomForest",
+        "frac": 0.6,
+        "n": 874.2,
+        "tr": 0.994,
+        "te": 0.543,
+        "se": 0.023
+      },
+      {
+        "model": "RandomForest",
+        "frac": 0.8,
+        "n": 1212.2,
+        "tr": 0.99,
+        "te": 0.59,
+        "se": 0.028
+      },
+      {
+        "model": "RandomForest",
+        "frac": 1.0,
+        "n": 1516.0,
+        "tr": 0.983,
+        "te": 0.575,
+        "se": 0.022
+      }
+    ],
+    "nn_curve_MLP": {
+      "min_val_epoch": 73,
+      "min_val": 0.5767059571252515,
+      "final_val": 1.0364398913813802
+    },
+    "nn_curve_MultiTask-NN": {
+      "min_val_epoch": 1,
+      "min_val": 0.39697393908103307,
+      "final_val": 0.6867240096387917
+    },
+    "tree_depth_curve": [
+      {
+        "depth": 1,
+        "train": 0.533,
+        "test": 0.489
+      },
+      {
+        "depth": 2,
+        "train": 0.556,
+        "test": 0.494
+      },
+      {
+        "depth": 3,
+        "train": 0.613,
+        "test": 0.489
+      },
+      {
+        "depth": 4,
+        "train": 0.667,
+        "test": 0.5
+      },
+      {
+        "depth": 6,
+        "train": 0.753,
+        "test": 0.503
+      },
+      {
+        "depth": 8,
+        "train": 0.836,
+        "test": 0.496
+      },
+      {
+        "depth": 12,
+        "train": 0.953,
+        "test": 0.53
+      },
+      {
+        "depth": 16,
+        "train": 0.994,
+        "test": 0.524
+      },
+      {
+        "depth": 30,
+        "train": 1.0,
+        "test": 0.501
+      }
+    ],
+    "lgbm_rounds": {
+      "best_test_round": 6,
+      "best_test_auc": 0.5825119394049155,
+      "chosen": 785,
+      "auc_at_chosen": 0.5745512056729369,
+      "auc_at_1500": 0.5652951689519127
+    }
+  },
+  "importance": {
+    "LightGBM": {
+      "w_attract": 0.0169,
+      "w_attract_std": 0.016,
+      "w_iq": 0.0126,
+      "absdiff_attract": 0.0119,
+      "m_conscientiousness": 0.0114,
+      "w_age": 0.009,
+      "absdiff_hard_work": 0.0082,
+      "absdiff_alcohol": 0.0048,
+      "m_openness": 0.0042,
+      "m_sex_partners": 0.0041,
+      "absdiff_age": 0.0039,
+      "m_age": 0.0039
+    },
+    "LogReg": {
+      "w_pol_importance": 0.0271,
+      "m_openness": 0.0184,
+      "absdiff_alcohol": 0.0182,
+      "m_casual_sex": 0.0173,
+      "m_height": 0.0141,
+      "w_family": 0.0115,
+      "w_age_in_bracket": 0.0102,
+      "w_age": 0.0101,
+      "m_attract": 0.0084,
+      "absdiff_marijuana": 0.0081,
+      "w_neuroticism": 0.0079,
+      "w_iq": 0.0077
+    }
+  },
+  "directional_importance": {
+    "y_m_likes": {
+      "w_attract": 0.062,
+      "attract_diff": 0.0364,
+      "m_age": 0.0102,
+      "absdiff_health": 0.0049,
+      "m_attract": 0.003,
+      "w_age_in_bracket": 0.0028,
+      "m_attract_std": 0.0021,
+      "w_health": 0.002
+    },
+    "y_w_likes": {
+      "attract_diff": 0.027,
+      "w_attract_std": 0.019,
+      "w_agreeableness": 0.011,
+      "m_attract": 0.0102,
+      "w_iq": 0.0081,
+      "n_women": 0.0054,
+      "w_openness": 0.0054,
+      "w_attract": 0.0051
+    }
+  },
+  "best_params": {
+    "LogReg-Attract": {
+      "C": 0.0012059738380975288
+    },
+    "LogReg": {
+      "C": 1.235274103307276,
+      "l1_ratio": 0.9159166744880783,
+      "class_weight": null
+    },
+    "kNN": {
+      "k": 28,
+      "weights": "uniform",
+      "p": 1
+    },
+    "DecisionTree": {
+      "max_depth": 5,
+      "min_samples_leaf": 11,
+      "criterion": "gini",
+      "class_weight": null
+    },
+    "RandomForest": {
+      "max_depth": 8,
+      "min_samples_leaf": 1,
+      "max_features": 0.3,
+      "class_weight": "balanced_subsample"
+    },
+    "LightGBM": {
+      "n_estimators": 785,
+      "learning_rate": 0.01248924089268298,
+      "num_leaves": 4,
+      "max_depth": 4,
+      "min_child_samples": 72,
+      "subsample": 0.974027858084126,
+      "colsample_bytree": 0.2366675504372695,
+      "reg_lambda": 1.9417459197427283,
+      "subsample_freq": 1
+    },
+    "MLP": {
+      "width": 32,
+      "depth": 1,
+      "dropout": 0.19287188396490917,
+      "lr": 0.0007737898528072461,
+      "wd": 0.0007161582761821736,
+      "batch": 256,
+      "pos_weight": 6.3,
+      "epochs": 105
+    },
+    "MultiTask-NN": {
+      "emb": 16,
+      "width": 16,
+      "dropout": 0.5954552187907427,
+      "lr": 0.006205759093666559,
+      "wd": 1.1278687328564652e-05,
+      "batch": 128,
+      "lam": 2.0247466464491266,
+      "epochs": 16
+    },
+    "LightGBM-Directional": {
+      "n_estimators": 98,
+      "learning_rate": 0.021710305578682927,
+      "num_leaves": 7,
+      "max_depth": 6,
+      "min_child_samples": 30,
+      "subsample": 0.5604939394871143,
+      "colsample_bytree": 0.7540689898800771,
+      "reg_lambda": 26.45900576358408,
+      "subsample_freq": 1
+    }
+  }
+}
